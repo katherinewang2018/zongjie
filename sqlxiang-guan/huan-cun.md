@@ -1,6 +1,4 @@
-可以参考：https://www.cnblogs.com/woshimrf/p/4957369.html
-
-
+可以参考：[https://www.cnblogs.com/woshimrf/p/4957369.html](https://www.cnblogs.com/woshimrf/p/4957369.html)
 
 项目中一般是使用二级缓存:开源中国的j2cache 和final框架集成的ehcache
 
@@ -11,10 +9,9 @@ jfinal项目中配置缓存：
 ```
 @Override
     public void configPlugin(Plugins plugins) {
-       
+
         //添加缓存插件
         plugins.add(new J2CachePlugin());
-
 ```
 
 2.J2CachePlugin
@@ -366,6 +363,12 @@ public class J2CacheKit {
 }
 ```
 
+8.配置的模板
+
+```
+这些配置文件的模板可以从 https://gitee.com/ld/J2Cache/tree/master/core/resources 这里获取。
+```
+
 另一种可以使用jfinal自己集成的ehcache缓存
 
 1.配置类中：
@@ -373,16 +376,14 @@ public class J2CacheKit {
 ```
 @Override
     public void configPlugin(Plugins plugins) {
-       
+
         //添加缓存插件
         plugins.add(new EhCachePlugin());
-
 ```
 
 2.使用 例子
 
 ```
-
 CacheKit.put(DataConfigService.givenCacheName, "givenEos", givenConfig.getValue());
 
 CacheKit.put(cacheName, key, value);
@@ -390,6 +391,8 @@ CacheKit.put(cacheName, key, value);
 //从缓存中取数据
 CacheKit.get(cacheName, key);
 
+//这个直接使用就是加入缓存了
+Db.findByCache(cacheName, key, sql);
 ```
 
 
