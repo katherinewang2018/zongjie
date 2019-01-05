@@ -43,15 +43,15 @@ select SUBSTRING\('abcde',0,8\) 返回结果为abcde,注意后面没有空格了
 
 例如：下面的 \|\| 表示绝对值计算
 
- select SUBSTRING\('abcde',0,2\) 返回结果为 a , 计算公式为SUBSTRING\(1,2-\|2-1\|\) 
+select SUBSTRING\('abcde',0,2\) 返回结果为 a , 计算公式为SUBSTRING\(1,2-\|2-1\|\)
 
- select SUBSTRING\('abcde',0,-1\) 返回错误提示“传递到 substring 函数的长度参数无效”
+select SUBSTRING\('abcde',0,-1\) 返回错误提示“传递到 substring 函数的长度参数无效”
 
- select SUBSTRING\('abcde',-1,2\) 返回结果为空, 计算公式为SUBSTRING\(1,2-\|-1-1\|\) 
+select SUBSTRING\('abcde',-1,2\) 返回结果为空, 计算公式为SUBSTRING\(1,2-\|-1-1\|\)
 
- select SUBSTRING\('abcde',-5,3\) 返回结果为空, 计算公式为SUBSTRING\(1,3-\|-5-1\|\) 
+select SUBSTRING\('abcde',-5,3\) 返回结果为空, 计算公式为SUBSTRING\(1,3-\|-5-1\|\)
 
- select SUBSTRING\('abcde',-1,4\) 返回结果为ab, 计算公式为SUBSTRING\(1,4-\|-1-1\|\) 
+select SUBSTRING\('abcde',-1,4\) 返回结果为ab, 计算公式为SUBSTRING\(1,4-\|-1-1\|\)
 
- select SUBSTRING\('abcde',-2,8\) 返回结果为abcde, 计算公式为SUBSTRING\(1,8-\|-2-1\|\) 
+select SUBSTRING\('abcde',-2,8\) 返回结果为abcde, 计算公式为SUBSTRING\(1,8-\|-2-1\|\)
 
