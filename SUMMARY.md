@@ -6,4 +6,5 @@
 ## sql相关
 
 * [mysql的编码](sqlxiang-guan/mysqlde-bian-ma.md)
+* [缓存](sqlxiang-guan/huan-cun.md)
 
