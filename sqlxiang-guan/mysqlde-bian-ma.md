@@ -57,7 +57,7 @@ select SUBSTRING\('abcde',-2,8\) 返回结果为abcde, 计算公式为SUBSTRING\
 
 [https://blog.csdn.net/mary19920410/article/details/76545053](https://blog.csdn.net/mary19920410/article/details/76545053)
 
-https://blog.csdn.net/u011280342/article/details/78285608
+[https://blog.csdn.net/u011280342/article/details/78285608](https://blog.csdn.net/u011280342/article/details/78285608)
 
 后面两个参数可以木有，就使用默认，默认的分隔符是逗号。
 
@@ -70,6 +70,18 @@ mysql的group\_concat默认连接长度为1024字符，也就是说你需要连�
 ```
 group_concat_max_len = 102400
 ```
+
+
+
+
+
+### CAST函数语法规则是：Cast\(字段名 as 转换的类型 \)，其中类型可以为：
+
+
+
+
+
+
 
 
 
