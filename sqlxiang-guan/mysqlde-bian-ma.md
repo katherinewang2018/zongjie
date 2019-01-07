@@ -71,17 +71,34 @@ mysql的group\_concat默认连接长度为1024字符，也就是说你需要连�
 group_concat_max_len = 102400
 ```
 
-
-
-
-
 ### CAST函数语法规则是：Cast\(字段名 as 转换的类型 \)，其中类型可以为：
 
+CHAR\[\(N\)\] 字符型
+
+  
 
 
+DATE 日期型
+
+  
 
 
+DATETIME 日期和时间型
 
+  
+
+
+DECIMAL float型
+
+  
+
+
+SIGNED int
+
+  
+
+
+TIME 时间型
 
 
 
