@@ -257,23 +257,23 @@ public class J2CachePlugin implements IPlugin {
 5.pom文件
 
 ```
-         <dependency>
-            <groupId>net.oschina.j2cache</groupId>
-            <artifactId>j2cache-core</artifactId>
-            <version>${j2cache.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sf.ehcache</groupId>
-            <artifactId>ehcache</artifactId>
-            <version>${ehcache.version}</version>
-        </dependency>
+       		 <dependency>
+			<groupId>net.oschina.j2cache</groupId>
+			<artifactId>j2cache-core</artifactId>
+			<version>2.7.6-release</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>2.9.1</version>
+		</dependency>
 
-        <!--redis-->
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>${jedis.version}</version>
-        </dependency>
+		<!--redis-->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.9.0</version>
+		</dependency>
 ```
 
 6.在进行缓存操作时，使用工具类
@@ -396,6 +396,14 @@ CacheKit.get(cacheName, key);
 //这个直接使用就是加入缓存了
 Db.findByCache(cacheName, key, sql);
 ```
+
+## **ps：最后是版本问题：**
+
+
+
+
+
+
 
 
 
