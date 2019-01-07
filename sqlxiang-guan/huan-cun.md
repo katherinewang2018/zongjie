@@ -276,6 +276,17 @@ public class J2CachePlugin implements IPlugin {
         </dependency>
 ```
 
+gradle管理时
+
+```
+compile group: 'net.oschina.j2cache', name: 'j2cache-core', version:'2.7.6-release'
+compile group: 'org.ehcache', name: 'ehcache', version: '3.6.1'
+compile group: 'net.sf.ehcache', name: 'ehcache-core', version: '2.6.11'
+compile group: 'redis.clients', name: 'jedis', version:'2.9.0'
+```
+
+
+
 6.在进行缓存操作时，使用工具类
 
 ```
