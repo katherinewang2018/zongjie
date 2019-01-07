@@ -85,13 +85,11 @@ SIGNED int
 
 TIME 时间型
 
-https://www.cnblogs.com/yangchunze/p/6667502.html
-
-
+[https://www.cnblogs.com/yangchunze/p/6667502.html](https://www.cnblogs.com/yangchunze/p/6667502.html)
 
 ### [数据类型DECIMAL用法](https://www.cnblogs.com/owenma/p/7097602.html)
 
-### https://www.cnblogs.com/owenma/p/7097602.html
+### [https://www.cnblogs.com/owenma/p/7097602.html](https://www.cnblogs.com/owenma/p/7097602.html)
 
 定义某个字段是decimal类型，使用：
 
@@ -101,27 +99,13 @@ column_name  DECIMAL(P,D);
 
 在上面的语法中：
 
-* `P`
-  是表示有效数字数的精度。 
-  `P`
-  范围为
-  `1〜65`
-  。
-* `D`
-  是表示小数点后的位数。 
-  `D`
-  的范围是
-  `0`
-  ~
-  `30`
-  。MySQL要求
-  `D`
-  小于或等于\(
-  `<`
-  `=`
-  \)
-  `P`
-  。
+```
+
+P是表示有效数字数的精度。 P范围为1〜65。
+D是表示小数点后的位数。 D的范围是0~30。MySQL要求D小于或等于(<=)P。
+```
+
+
 
 
 
