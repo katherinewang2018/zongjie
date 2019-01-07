@@ -1,4 +1,4 @@
-SUBSTRING  \( expression, start, length \)
+### SUBSTRING  \( expression, start, length \)
 
 参数
 
@@ -52,4 +52,22 @@ select SUBSTRING\('abcde',-5,3\) 返回结果为空, 计算公式为SUBSTRING\(1
 select SUBSTRING\('abcde',-1,4\) 返回结果为ab, 计算公式为SUBSTRING\(1,4-\|-1-1\|\)
 
 select SUBSTRING\('abcde',-2,8\) 返回结果为abcde, 计算公式为SUBSTRING\(1,8-\|-2-1\|\)
+
+### group\_concat\( \[distinct\] 要连接的字段 \[order by 排序字段 asc/desc  \] \[separator '分隔符'\] \)
+
+https://blog.csdn.net/mary19920410/article/details/76545053
+
+后面两个参数可以木有，就使用默认，默认的分隔符是逗号。
+
+另外需要注意的是:
+
+mysql的group\_concat默认连接长度为1024字符，也就是说你需要连接后的连接超过1024字符，它只会显示这么长，其余部分都会被截取丢掉。
+
+可以通过修改配置文件，在mysql配置文件中添加如下这句，修改配置文件后记得需要重启mysql服务
+
+```
+group_concat_max_len = 102400
+```
+
+
 
