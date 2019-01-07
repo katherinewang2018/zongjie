@@ -178,7 +178,7 @@ public class J2CachePlugin implements IPlugin {
     redis.blockWhenExhausted = false
     redis.jmxEnabled = false
 
-4.在res文件夹中添加xml配置文件
+4.在res文件夹中添加ehcache.xml配置文件
 
 ```
 <ehcache updateCheck="false" dynamicConfig="false"  >
@@ -381,7 +381,9 @@ public class J2CacheKit {
         plugins.add(new EhCachePlugin());
 ```
 
-2.使用 例子
+2.跟上面一样也要配置ehcache.xml
+
+3.使用 例子
 
 ```
 CacheKit.put(DataConfigService.givenCacheName, "givenEos", givenConfig.getValue());
