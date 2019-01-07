@@ -53,9 +53,11 @@ select SUBSTRING\('abcde',-1,4\) 返回结果为ab, 计算公式为SUBSTRING\(1,
 
 select SUBSTRING\('abcde',-2,8\) 返回结果为abcde, 计算公式为SUBSTRING\(1,8-\|-2-1\|\)
 
-### group\_concat\( \[distinct\] 要连接的字段 \[order by 排序字段 asc/desc  \] \[separator '分隔符'\] \)
+### group\_concat\( \[distinct\] 要连接的字段 \[order by 排序字段 asc/desc  \] \[separator '分隔符'\] \)
 
-https://blog.csdn.net/mary19920410/article/details/76545053
+[https://blog.csdn.net/mary19920410/article/details/76545053](https://blog.csdn.net/mary19920410/article/details/76545053)
+
+https://blog.csdn.net/u011280342/article/details/78285608
 
 后面两个参数可以木有，就使用默认，默认的分隔符是逗号。
 
