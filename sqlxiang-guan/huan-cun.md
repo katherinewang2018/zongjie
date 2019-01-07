@@ -254,10 +254,10 @@ public class J2CachePlugin implements IPlugin {
 </ehcache>
 ```
 
-5.pom文件
+5.pom文件 请注意版本
 
 ```
-                <dependency>
+        <dependency>
             <groupId>net.oschina.j2cache</groupId>
             <artifactId>j2cache-core</artifactId>
             <version>2.7.6-release</version>
@@ -436,8 +436,6 @@ public class J2Cache {
 }
 ```
 
-
-
 ## 这两个版本的配置\(j2cache.properties\)会不一样，
 
 使用2.7.6-release时，j2cache.properties配置内容;
@@ -570,8 +568,6 @@ public class J2Cache {
     redis.blockWhenExhausted = false
     redis.jmxEnabled = false
 
-
-
 另一个1.3.0版本中：
 
 ```
@@ -587,23 +583,23 @@ public class J2Cache {
 ```
 public class J2Cache {
 
-	private final static String CONFIG_FILE = "/j2cache.properties";
-	private final static CacheChannel channel;
-	
-	static {
-		try {
-			Properties props = loadConfig();
-			String cache_broadcast = props.getProperty("cache.broadcast"); //配置名称固定为cache.broadcast
-			if("redis".equalsIgnoreCase(cache_broadcast))
-				channel =  RedisCacheChannel.getInstance();
-			else if("jgroups".equalsIgnoreCase(cache_broadcast))
-				channel = JGroupsCacheChannel.getInstance(); //并且其对应的值只有redis或者jgroups
-			else
-				throw new CacheException("Cache Channel not defined. name = " + cache_broadcast);
-		} catch (IOException e) {
-			throw new CacheException("Unabled to load j2cache configuration "+CONFIG_FILE, e);
-		}
-	}
+    private final static String CONFIG_FILE = "/j2cache.properties";
+    private final static CacheChannel channel;
+
+    static {
+        try {
+            Properties props = loadConfig();
+            String cache_broadcast = props.getProperty("cache.broadcast"); //配置名称固定为cache.broadcast
+            if("redis".equalsIgnoreCase(cache_broadcast))
+                channel =  RedisCacheChannel.getInstance();
+            else if("jgroups".equalsIgnoreCase(cache_broadcast))
+                channel = JGroupsCacheChannel.getInstance(); //并且其对应的值只有redis或者jgroups
+            else
+                throw new CacheException("Cache Channel not defined. name = " + cache_broadcast);
+        } catch (IOException e) {
+            throw new CacheException("Unabled to load j2cache configuration "+CONFIG_FILE, e);
+        }
+    }
 ```
 
 1.3.0版本中的配置，具体还不知道。。。。
