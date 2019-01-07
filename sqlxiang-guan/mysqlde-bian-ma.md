@@ -89,6 +89,8 @@ TIME 时间型
 
 ### [数据类型DECIMAL用法](https://www.cnblogs.com/owenma/p/7097602.html)
 
+### https://blog.csdn.net/u010002184/article/details/79238624
+
 ### [https://www.cnblogs.com/owenma/p/7097602.html](https://www.cnblogs.com/owenma/p/7097602.html)
 
 定义某个字段是decimal类型，使用：
@@ -100,12 +102,24 @@ column_name  DECIMAL(P,D);
 在上面的语法中：
 
 ```
-
 P是表示有效数字数的精度。 P范围为1〜65。
 D是表示小数点后的位数。 D的范围是0~30。MySQL要求D小于或等于(<=)P。
 ```
 
+与INT数据类型一样，`DECIMAL`类型也具有`UNSIGNED`和`ZEROFILL`属性。 如果使用`UNSIGNED`属性，则`DECIMAL UNSIGNED`的列将不接受负值。
 
+### mysql中的内置函数
+
+```
+SELECT CURRENT_TIME(); 20:30:20
+SELECT NOW(); 2018-02-11 20:22:22
+SELECT SYSDATE(); 2018-02-11 20:22:22
+SELECT CURRENT_DATE() FROM DUAL; 2018-02-11
+```
+
+```
+SELECT * FROM coin_data WHERE DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= DATE(past_time);
+```
 
 
 
