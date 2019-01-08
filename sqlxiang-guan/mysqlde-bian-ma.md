@@ -170,5 +170,15 @@ SELECT TIMEDIFF("2009-05-18 15:45:57.005678","2009-05-18 13:40:50.005670");
 SELECT TIMESTAMPADD(MONTH,2,'2009-05-18');
 ```
 
+```
+SELECT left('chinese', 4);        # chin
+SELECT left(NULL , 4);            # null
+SELECT left('chinese', NULL);     # null
+SELECT right('chinese', 3);       # ese
+SELECT right(NULL , 3);           # null
+SELECT right('chinese', NULL );   # null
+
+```
+
 
 
