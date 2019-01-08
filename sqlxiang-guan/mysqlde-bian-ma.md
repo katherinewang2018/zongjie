@@ -89,7 +89,7 @@ TIME 时间型
 
 ### [数据类型DECIMAL用法](https://www.cnblogs.com/owenma/p/7097602.html)
 
-### https://blog.csdn.net/u010002184/article/details/79238624
+### [https://blog.csdn.net/u010002184/article/details/79238624](https://blog.csdn.net/u010002184/article/details/79238624)
 
 ### [https://www.cnblogs.com/owenma/p/7097602.html](https://www.cnblogs.com/owenma/p/7097602.html)
 
@@ -118,7 +118,7 @@ SELECT CURRENT_DATE() FROM DUAL; 2018-02-11
 ```
 
 ```
-SELECT * FROM coin_data WHERE DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= DATE(past_time);
+SELECT * FROM coin_data WHERE DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= DATE(past_time);//获取七天内的数据
 ```
 
 
