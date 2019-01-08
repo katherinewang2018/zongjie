@@ -127,7 +127,6 @@ SELECT * FROM dapp_access_hour
  WHERE dapp_access_day_id = #para(dappAccessDayId) AND #para(countHour) >=  count_hour
  AND #para(countHour) < DATE_ADD(count_hour,INTERVAL '1' HOUR)
 #end
-
 ```
 
 另一种\(做列表查询时 尽量注意排序问题\)：
@@ -162,7 +161,13 @@ SELECT second('12-13-14');                # 12
 SELECT second('2008-09-10 12:13:14');     # 14
 SELECT second('2008-09-10 122:13:14');    # null
 SELECT second('2008-09-10 12-13-14');     # 14
+```
 
+```
+SELECT LAST_DAY('2009-02-18 15:45:53');
+SELECT TIME_FORMAT("97:15:40","%H %k %h %I %l");
+SELECT TIMEDIFF("2009-05-18 15:45:57.005678","2009-05-18 13:40:50.005670");
+SELECT TIMESTAMPADD(MONTH,2,'2009-05-18');
 ```
 
 
