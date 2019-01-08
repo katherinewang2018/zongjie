@@ -121,5 +121,49 @@ SELECT CURRENT_DATE() FROM DUAL; 2018-02-11
 SELECT * FROM coin_data WHERE DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= DATE(past_time);//获取七天内的数据
 ```
 
+```
+//查询某个时间段是否在某个小时内
+SELECT * FROM dapp_access_hour
+ WHERE dapp_access_day_id = #para(dappAccessDayId) AND #para(countHour) >=  count_hour
+ AND #para(countHour) < DATE_ADD(count_hour,INTERVAL '1' HOUR)
+#end
+
+```
+
+另一种\(做列表查询时 尽量注意排序问题\)：
+
+```
+SELECT * FROM dapp_access_hour
+ WHERE dapp_access_day_id = ?
+ AND HOUR(count_hour) = HOUR(?) //hour函数可以获得时间中的小时
+ ORDER BY dapp_access_hour_id ASC
+```
+
+### mysql的时间函数
+
+```
+SELECT hour('12:13:14');                  # 12
+SELECT hour('122:13:14');                 # 122
+SELECT hour('12-13-14');                  # 0
+SELECT hour('2008-09-10 12:13:14');       # 12
+SELECT hour('2008-09-10 122:13:14');      # null
+SELECT hour('2008-09-10 12-13-14');       # 12
+
+SELECT minute('12:13:14');                # 13
+SELECT minute('12:60:14');                # null
+SELECT minute('12-13-14');                # 0
+SELECT minute('2008-09-10 12:13:14');     # 13
+SELECT minute('2008-09-10 122:13:14');    # null
+SELECT minute('2008-09-10 12-13-14');     # 13
+
+SELECT second('12:13:14');                # 14
+SELECT second('12:13:60');                # null
+SELECT second('12-13-14');                # 12
+SELECT second('2008-09-10 12:13:14');     # 14
+SELECT second('2008-09-10 122:13:14');    # null
+SELECT second('2008-09-10 12-13-14');     # 14
+
+```
+
 
 
