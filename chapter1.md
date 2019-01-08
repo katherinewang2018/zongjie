@@ -44,7 +44,11 @@ UndertowServer.create(JFinalClubConfig.class).
 setResourcePath("E:\\testCode\\summary\\jfinal-club\\jfinal-club\\src\\main\\webapp").start();
 ```
 
-接入物流信息查询的api接口实现
+接入物流信息查询的api接口实现，调用别人的接口查询 
 
-https://blog.csdn.net/qq\_36410795/article/details/72462143
+[https://blog.csdn.net/qq\_36410795/article/details/72462143](https://blog.csdn.net/qq_36410795/article/details/72462143)
+
+以下是自己实现的查询 
+
+https://blog.csdn.net/java\_2017\_csdn/article/details/82887382
 
