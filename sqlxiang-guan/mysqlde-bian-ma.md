@@ -177,8 +177,9 @@ SELECT left('chinese', NULL);     # null
 SELECT right('chinese', 3);       # ese
 SELECT right(NULL , 3);           # null
 SELECT right('chinese', NULL );   # null
-
 ```
 
+### mysql中explain的用法
 
+http://www.cnblogs.com/yycc/p/7338894.html
 

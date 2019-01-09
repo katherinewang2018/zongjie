@@ -18,23 +18,11 @@ DAO层：
 
 使用 @Inject 注解可以向 Controller 以及 Interceptor 中注入依赖对象。
 
-  
-
-
 所以只有controller和interceptor中可以这样用。并且确认配置里面是否
-
-  
-
 
 me.setInjectDependency\(true\);
 
-  
-
-
 如果在其他情况中使用是这样用：
-
-  
-
 
 Service service = Aop.get\(Service.class\);
 
