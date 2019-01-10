@@ -53,14 +53,11 @@ public class ActiveRecordTest {
 
 将其转换成 Map 类型再迭代即可
 
-
-
-### jfinal查询数据
+### jfinal查询数据，jfinal框架有意思的地方
 
 sql：
 
 ```
-
 #sql("all")
   SELECT e.*, ei.name, ei.cover, ei.intro, ei.lang //注意这里的查询结果 这里是两个表
   FROM event e
