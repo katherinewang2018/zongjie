@@ -1,4 +1,4 @@
-##  部分在linux系统部署jfinal项目
+## 部分在linux系统部署jfinal项目
 
 ### 1.部署redis
 
@@ -14,7 +14,7 @@
 
 [http://www.jfinal.com/share/1298](http://www.jfinal.com/share/1298)
 
-使用ngix安装nginx 并配置nginx.conf，转发访问
+\(部分配置\)使用ngix安装nginx 并配置nginx.conf，转发访问
 
 ```
 #A项目 config start    
