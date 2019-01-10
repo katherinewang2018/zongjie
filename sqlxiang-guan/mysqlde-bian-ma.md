@@ -191,13 +191,11 @@ SELECT right('chinese', NULL );   # null
 
 避免引擎全表扫描的操作符（!= 或 &lt;&gt;）
 
-避免使用or in 和 not in 
+避免使用or in 和 not in
 
     SELECT `column` FROM `table` WHERE `field` like 'keyword%';//SQL语句使用了索引
 
-    SELECT `column` FROM `table` WHERE `field` like '%keyword%'; //SQL语句没用使用索引
-
-
+    SELECT `column` FROM `table` WHERE `field` like '%keyword%'; //SQL语句没用使用索引,避免使用这种查询
 
 
 
