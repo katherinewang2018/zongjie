@@ -197,5 +197,7 @@ SELECT right('chinese', NULL );   # null
 
     SELECT `column` FROM `table` WHERE `field` like '%keyword%'; //SQL语句没用使用索引,避免使用这种查询
 
+SHOW INDEX FROM 表名;  //可以查询表的index\_type 
 
+BTREE
 
