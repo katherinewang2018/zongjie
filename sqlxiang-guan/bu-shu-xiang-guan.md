@@ -2,11 +2,7 @@
 
 ### 1.部署redis
 
-
-
-
-
-
+https://www.cnblogs.com/zhaoyan001/p/6143170.html
 
 
 
