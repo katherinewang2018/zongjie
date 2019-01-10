@@ -24,8 +24,6 @@ me.setInjectDependency\(true\);
 
 Service service = Aop.get\(Service.class\);
 
-
-
 ### 测试service层
 
 ```

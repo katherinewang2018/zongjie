@@ -179,7 +179,9 @@ SELECT right(NULL , 3);           # null
 SELECT right('chinese', NULL );   # null
 ```
 
-### 
+### LOWER\(str\)函数
+
+返回字符串str，改为根据当前字符集映射为小写字母。
 
 
 
