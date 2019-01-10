@@ -185,6 +185,8 @@ SELECT right('chinese', NULL );   # null
 
 ### sql的优化
 
+https://blog.csdn.net/javandroid/article/details/53791706
+
 [https://www.cnblogs.com/yunfeifei/p/3850440.html](https://www.cnblogs.com/yunfeifei/p/3850440.html)
 
 [https://www.cnblogs.com/exe19/p/5786806.html](https://www.cnblogs.com/exe19/p/5786806.html)
@@ -197,7 +199,7 @@ SELECT right('chinese', NULL );   # null
 
     SELECT `column` FROM `table` WHERE `field` like '%keyword%'; //SQL语句没用使用索引,避免使用这种查询
 
-SHOW INDEX FROM 表名;  //可以查询表的index\_type 
+SHOW INDEX FROM 表名;  //可以查询表的index\_type
 
 BTREE
 
