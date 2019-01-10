@@ -183,5 +183,11 @@ SELECT right('chinese', NULL );   # null
 
 返回字符串str，改为根据当前字符集映射为小写字母。
 
+### sql的优化
+
+https://www.cnblogs.com/yunfeifei/p/3850440.html
+
+避免引擎全表扫描的操作符（!= 或 &lt;&gt;）
+
 
 
