@@ -12,7 +12,11 @@
 
 ### 3.部署mysql等
 
-https://www.cnblogs.com/qq3111901846/p/6178855.html
+[https://www.cnblogs.com/qq3111901846/p/6178855.html](https://www.cnblogs.com/qq3111901846/p/6178855.html)
+
+阿里云服务器
+
+https://www.cnblogs.com/zeroingToOne/p/8886446.html
 
 ## 在window下部署多个web项目
 
