@@ -10,6 +10,10 @@
 
 ### 2.部署zbus
 
+### 3.部署mysql等
+
+https://www.cnblogs.com/qq3111901846/p/6178855.html
+
 ## 在window下部署多个web项目
 
 [http://www.jfinal.com/share/1298](http://www.jfinal.com/share/1298)
