@@ -53,3 +53,49 @@ public class ActiveRecordTest {
 
 将其转换成 Map 类型再迭代即可
 
+
+
+### jfinal查询数据
+
+sql：
+
+```
+
+#sql("all")
+  SELECT e.*, ei.name, ei.cover, ei.intro, ei.lang //注意这里的查询结果 这里是两个表
+  FROM event e
+  INNER JOIN event_info ei USING (event_id)
+  WHERE e.status = 1
+  #if(lang) AND ei.lang = #para(lang) #end
+  #if(type) AND e.type = #para(type) #end
+  ORDER BY e.edit_time DESC
+  LIMIT #para(limitNum)
+#end
+```
+
+service层
+
+```
+public List<Event> findAll(int limitNum, String lang, String type) { //返回了event对象
+        Kv param = Kv.by("limitNum", limitNum)
+                .set("lang", EventConst.LANG_EN.equals(lang) ? EventConst.LANG_EN : EventConst.LANG_CH).set("type", type);
+        return Event.dao.find(Db.getSqlPara("event.all", param));
+    }
+```
+
+在controller层中 获取数据时：
+
+```
+Record data = new Record();
+data.set("openMode", event.getOpenMode());
+data.set("openTag", event.getOpenTag());
+data.set("link", event.getLink()); //是event的属性
+data.set("name", event.get("name"));//不是event的属性
+data.set("cover", cover);
+data.set("intro", event.get("intro"));
+data.set("lang", event.get("lang"));
+data.set("type", event.getType());
+```
+
+
+

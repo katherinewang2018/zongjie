@@ -185,9 +185,11 @@ SELECT right('chinese', NULL );   # null
 
 ### sql的优化
 
-https://www.cnblogs.com/yunfeifei/p/3850440.html
+[https://www.cnblogs.com/yunfeifei/p/3850440.html](https://www.cnblogs.com/yunfeifei/p/3850440.html)
 
 避免引擎全表扫描的操作符（!= 或 &lt;&gt;）
+
+避免使用or in 和 not in 以及左边带%号的like语句
 
 
 
