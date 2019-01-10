@@ -187,9 +187,9 @@ SELECT right('chinese', NULL );   # null
 
 [https://www.cnblogs.com/yunfeifei/p/3850440.html](https://www.cnblogs.com/yunfeifei/p/3850440.html)
 
+https://www.cnblogs.com/exe19/p/5786806.html
+
 避免引擎全表扫描的操作符（!= 或 &lt;&gt;）
 
 避免使用or in 和 not in 以及左边带%号的like语句
-
-
 
