@@ -6,9 +6,29 @@
 
 对linux系统中的redis设置访问密码
 
-https://www.cnblogs.com/herry52/p/5997041.html
+[https://www.cnblogs.com/herry52/p/5997041.html](https://www.cnblogs.com/herry52/p/5997041.html)
 
 ### 2.部署zbus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 在window下部署多个web项目
+
+http://www.jfinal.com/share/1298
+
+使用ngix安装nginx 并配置nginx.conf，转发访问
 
 
 
