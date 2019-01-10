@@ -22,7 +22,7 @@ me.setInjectDependency\(true\);
 
 如果在其他情况中使用是这样用：
 
-Service service = Aop.get\(Service.class\);
+Service service = Aop.get\(Service.class\); //jfinal 3.5 版本以上
 
 ### 测试service层
 
@@ -30,7 +30,6 @@ Service service = Aop.get\(Service.class\);
 public class ActiveRecordTest {
     public static void main(String[] args) {
         Prop p = PropKit.use("数据库连接配置文件.txt");
-
 
         DruidPlugin dp = new DruidPlugin(p.get("jdbcUrl"), p.get("user"), p.get("password").trim());
         ActiveRecordPlugin arp = new ActiveRecordPlugin(dp);
