@@ -50,9 +50,13 @@ public class ActiveRecordTest {
 
 ### template engine如果后台返回的数据是json格式，如何在页面获取：
 
+\#for 指令可以对 List、数组、Map、Set 等类型迭代，不能对 String 内部的数据进行迭代
+
+  
 
 
+  
 
 
-
+你的 json 变量看上去是一个 String 类型，将其转换成 Map 类型再迭代即可
 
