@@ -41,7 +41,7 @@ public class ActiveRecordTest {
         arp.start();
 
         // 通过上面简单的几行代码，即可立即开始使用
-        public static final ProjectAdminService me = new ProjectAdminService();//引入测试的service层
+        //final ProjectAdminService me = new ProjectAdminService();//引入测试的service层
 
 
     }
