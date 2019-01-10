@@ -48,5 +48,11 @@ public class ActiveRecordTest {
 }
 ```
 
+### template engine如果后台返回的数据是json格式，如何在页面获取：
+
+
+
+
+
 
 
