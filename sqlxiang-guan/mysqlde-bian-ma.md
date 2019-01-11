@@ -185,7 +185,7 @@ SELECT right('chinese', NULL );   # null
 
 ### sql的优化
 
-https://blog.csdn.net/javandroid/article/details/53791706
+[https://blog.csdn.net/javandroid/article/details/53791706](https://blog.csdn.net/javandroid/article/details/53791706)
 
 [https://www.cnblogs.com/yunfeifei/p/3850440.html](https://www.cnblogs.com/yunfeifei/p/3850440.html)
 
@@ -195,6 +195,8 @@ https://blog.csdn.net/javandroid/article/details/53791706
 
 避免使用or in 和 not in
 
+    以%开头的LIKE查询不能够利用B-tree索引。
+
     SELECT `column` FROM `table` WHERE `field` like 'keyword%';//SQL语句使用了索引
 
     SELECT `column` FROM `table` WHERE `field` like '%keyword%'; //SQL语句没用使用索引,避免使用这种查询
@@ -202,4 +204,41 @@ https://blog.csdn.net/javandroid/article/details/53791706
 SHOW INDEX FROM 表名;  //可以查询表的index\_type
 
 BTREE
+
+========================================================================================================
+
+```
+//显示数据库运行状态
+SHOW STATUS
+//显示数据库运行总时间
+SHOW STATUS LIKE 'uptime'
+//显示连接的次数
+SHOW STATUS LIKE 'connections'
+//显示执行CRUD的次数
+SHOW STATUS LIKE 'com_select'
+SHOW STATUS LIKE 'com_insert'
+SHOW STATUS LIKE 'com_update'
+SHOW STATUS LIKE 'com_delete'
+
+#查看是否启用慢日志记录和状态 
+show variables like "%slow%"
+
+//查看是否支持profile
+SELECT @@have_profiling
+//开启profile
+set profiling=1;
+
+```
+
+#### mysql的索引
+
+```
+B-tree索引：我们通常在讨论索引的时候，如果没有特别指明，通常说的就是B-tree索引。MyISAM和InnoDB存储引擎的表默认创建的都是btree索引。B-Tree索引中的B不代表二叉树(binary)，而是代表平衡树(balanced)。B-Tree索引并不是一颗二叉树。
+Hash索引：只有memory引擎支持，使用场景简单
+R-tree索引(空间数据索引)：MyISAM引擎的一个特殊索引类型，主要用于地理空间数据类型，通常使用较少。
+Full text(全文索引)：InnoDB从Mysql5.6版本开始提供对全文索引的支持。仅限于CHAR、VARCHAR和TEXT列。全文索引只能用于英文，如果出现中文，还是应该使用Lucene等第三方开源框架来处理。
+
+```
+
+
 
